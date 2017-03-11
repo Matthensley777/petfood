@@ -1,11 +1,10 @@
 {
   "catBrands": [
     {
-      "name": "Chuck wagon",
+      "name": "Kitten Chow",
       "types": [
         {
           "type": "all_natural",
-          "url": "http://www.chuckwagonbranddogfood.com/images/pg_product_dogdinnergravy.jpg",
           "volumes": [
             {
               "name": "32oz",
@@ -36,8 +35,8 @@
       "name": "Purina",
       "types": [
         {
-          "type": "puppy",
-          "url": "http://www.dollargeneral.com/media/catalog/product/cache/1/image/700x700/e9c3970ab036de70892d86c6d221abfe/1/8/18005365_zzz.jpg",
+          "type": "kitten",
+          
           "volumes": [
             {
               "name": "16oz",
