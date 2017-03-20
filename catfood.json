@@ -1,18 +1,18 @@
 {
   "catBrands": [
     {
-      "name": "Kitten Chow",
+      "name": "Purrina",
       "types": [
         {
           "type": "all_natural",
           "volumes": [
             {
-              "name": "32oz",
-              "price": 9.99
+              "name": "20oz",
+              "price": 24.99
             },
             {
-              "name": "64oz",
-              "price": 17.99
+              "name": "40oz",
+              "price": 47.99
             }
           ]
         },
@@ -32,7 +32,7 @@
       ]
     },
     {
-      "name": "Purina",
+      "name": "Meow Meal",
       "types": [
         {
           "type": "kitten",

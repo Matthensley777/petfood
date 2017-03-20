@@ -1,5 +1,5 @@
 var petFood = document.getElementById("petFood");
-var catFood = document.getElementById("catFood");
+var catFoodContainer = document.getElementById("catFood");
 
 function makeDogDom(dogData) {
     var dogFood = "";
@@ -32,19 +32,19 @@ function makeDogDom(dogData) {
 function makeCatDom(catData) {
     var catFood = "";
 
-    for (var i = 0; i < catData.catBrands.length; i++) {
-        console.log(catData.catBrands[i]);
-        var currentCatBrand = catData.catBrands[i];
+    for (var s = 0; s < catData.catBrands.length; s++) {
+        console.log(catData.catBrands[s]);
+        var currentCatBrand = catData.catBrands[s];
         catFood += `<div class="col-sm-6 col-md-4">`;
         catFood += `<h3>${currentCatBrand.name}</h3>`;
         catFood += `<div class="caption">`;
 
-        for (var j = 0; j < currentCatBrand.types.length; j++) {
-            var currentType = currentCatBrand.types[j];
+        for (var l = 0; l < currentCatBrand.types.length; l++) {
+            var currentType = currentCatBrand.types[l];
             catFood += `<p>${currentType.type}</p>`;
 
-            for (var k = 0; k < currentType.volumes.length; k++) {
-                var currentVolume = currentType.volumes[k];
+            for (var w = 0; w < currentType.volumes.length; w++) {
+                var currentVolume = currentType.volumes[w];
                 catFood += `<p>$${currentVolume.price} ${currentVolume.name}</p>`;
 
             }
@@ -52,22 +52,22 @@ function makeCatDom(catData) {
         }
         catFood += `</div></div>`;
     }
-    catFood.innerHTML = catFood;
+    catFoodContainer.innerHTML = catFood;
 }
 
 
 function executeThisCodeAfterFileLoaded() {
 
-    var data = JSON.parse(this.responseText);
-    console.log(data);
-    makeDogDom(data);
+    var dogData = JSON.parse(this.responseText);
+    console.log(dogData);
+    makeDogDom(dogData);
 }
 
 function executeCatCodeAfterFileLoads() {
 
-    var data = JSON.parse(this.responseText);
-    console.log(data);
-    makeCatDom(data);
+    var catData = JSON.parse(this.responseText);
+    console.log(catData);
+    makeCatDom(catData);
 }
 
 
