@@ -1,9 +1,7 @@
-console.log("First line in js file: ", Date.now());
-
 var petFood = document.getElementById("petFood");
 var catFood = document.getElementById("catFood");
 
-function makeDom(dogData) {
+function makeDogDom(dogData) {
     var dogFood = "";
 
 
@@ -31,11 +29,11 @@ function makeDom(dogData) {
 
 
 
-function makeDom(catData) {
+function makeCatDom(catData) {
     var catFood = "";
 
-
     for (var i = 0; i < catData.catBrands.length; i++) {
+        console.log(catData.catBrands[i]);
         var currentCatBrand = catData.catBrands[i];
         catFood += `<div class="col-sm-6 col-md-4">`;
         catFood += `<h3>${currentCatBrand.name}</h3>`;
@@ -62,16 +60,50 @@ function executeThisCodeAfterFileLoaded() {
 
     var data = JSON.parse(this.responseText);
     console.log(data);
-    makeDom(data);
+    makeDogDom(data);
+}
+
+function executeCatCodeAfterFileLoads() {
+
+    var data = JSON.parse(this.responseText);
+    console.log(data);
+    makeCatDom(data);
 }
 
 
 
-var myRequest = new XMLHttpRequest();
-myRequest.addEventListener("load", executeThisCodeAfterFileLoaded);
-myRequest.open("GET", "main.json");
-myRequest.open("GET", "catfood.json");
 
-myRequest.send();
+var myDogFoodRequest = new XMLHttpRequest();
+myDogFoodRequest.addEventListener("load", executeThisCodeAfterFileLoaded);
+myDogFoodRequest.open("GET", "main.json");
+myDogFoodRequest.send();
+
+
+var myCatFoodRequest = new XMLHttpRequest();
+myCatFoodRequest.addEventListener("load", executeCatCodeAfterFileLoads);
+myCatFoodRequest.open("GET", "catfood.json");
+myCatFoodRequest.send();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
